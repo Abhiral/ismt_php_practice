@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.logo-wrapper{
+    text-align: center;
+}
+
+nav{
+    background-color: blue;
+    padding: 10px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.banner-image img{
+    width: 100%;
+    height: auto;
+}
+
+h2{
+    text-align: center;
+    margin: 50px 0;
+}
+
+.about-cover{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-description, .about-image{
+    width: 45%;
+}
+
+footer{
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 525px) {
+    .about-cover{
+        display: block;
+    }
+    .about-description, .about-image{
+        width: 100%;
+    }
+}

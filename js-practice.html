@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Practice</title>
+</head>
+<body>
+    <!-- <h1 id="ismt"></h1>
+    <h1 id="switchCase"></h1>
+    
+    <form action="/abc.php" method="post" name="myForm" onsubmit="return validateForm()">
+        <label for="fullName">Full Name</label>
+        <input type="text" name="fullName" id="fullName"><br><br>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email"><br><br>
+        <label for="phone">Phone No.</label>
+        <input type="number" name="phone" id="phone"><br><br>
+        <label for="message">Message</label>
+        <textarea name="message" id="message" cols="30" rows="5">
+        </textarea>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p id="forLoop"></p>
+
+    <p id="whileLoop"></p>
+
+    <p id="doWhileLoop"></p>
+
+    <p id="forIn"></p>
+
+    <p id="forOf"></p>
+    
+    <pre id="patternInBody"></pre>
+    
+    <button onclick="onClickFunction()">Click Me!</button>
+    <p id="onClickExample"></p>
+
+    <img src="./image/logo.png" alt="Logo" height="100" width="100" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+     -->
+
+     <?php
+        echo "Hello World!";
+     ?>
+
+     <?php
+        <!-- -----variables----- -->
+        $txt = "Hello World";
+        $x = 5;
+        $y = 11.15;
+        $color = "red";
+
+        echo "My car is " . $color. "<br>";
+        echo "My house is " . $COLOR. "<br>";
+        echo "My boat is " . $coLOR. "<br>";
+
+        <!-- -----constants----- -->
+        define("GREETING", "Welcome to ISMT");
+        echo "GREETING";
+     ?>
+
+    <script>
+        var students = ["A", "B", "C"];
+        students[0] = "D";
+        console.log(students);
+    </script>
+
+    <script>
+        function zoomIn(x){
+            x.style.height = "300px";
+            x.style.width = "300px";
+        }
+
+        function zoomOut(y){
+            y.style.height = "100px";
+            y.style.width = "100px";
+        }
+    </script>
+
+    <script>
+        function onClickFunction(){
+            document.getElementById("onClickExample").innerHTML = "Hello World";
+        }
+    </script>
+
+    <script>
+        function printPattern(rows) {
+            let pattern = "";
+            for (let i = 1; i <= rows; i++) {
+                for (let j = 1; j <= i; j++) {
+                    pattern += j + " ";
+                }
+                pattern += "<br>";
+            }
+            document.getElementById("patternInBody").innerHTML = pattern;
+            // console.log(pattern);
+        }
+        printPattern(4); 
+    </script>
+
+    <script>
+        var students = ["Alfa", "Ben", "Charlie","David", "abbc", "dlkafjdklas"];
+        var x;
+        var text = '';
+        for(x of students){
+            text += "I am " + x + "<br/>";
+        }
+        document.getElementById("forOf").innerHTML = text;
+    </script>
+
+    <script>
+        var students = ["Alfa", "Ben", "Charlie","David", "abbc", "dlkafjdklas"];
+        var x;
+        var text = '';
+        for(x in students){
+            text += "I am " + x + "<br/>";
+        }
+        document.getElementById("forIn").innerHTML = text;
+    </script>
+
+    <script>
+        var i=0;
+        var text = '';
+        do{
+            text += "I am " + i + "<br/>";
+            i++;
+        }
+        while(i<10)
+        document.getElementById("doWhileLoop").innerHTML = text;
+    </script>
+
+    <script>
+        var i=0;
+        var text = '';
+        while(i<10){
+            text += "I am printing " + i + "<br/>";
+            i++;
+        }
+        document.getElementById("whileLoop").innerHTML = text;
+    </script>
+
+    <script>
+        var text;
+        for(i = 0; i <= 10; i++) {
+            text += "The number is " + i + "<br>";
+        }
+        document.getElementById("forLoop").innerHTML = text;
+    </script>
+
+    <script>
+        function validateForm(){
+            var x = document.getElementById("fullName").value;
+            if (x==''){
+                alert("Full Name is required");
+                return false;
+            }
+            var y = document.getElementById("email").value;
+            if (y==''){
+                alert("Email is required");
+                return false;
+            }
+            var z = document.getElementById("phone").value;
+            if (z==''){
+                alert("Phone Number is required");
+                return false;
+            }
+        }
+    </script>
+
+    <script>
+        var day;
+        //alert(new Date().getDay());
+        switch(new Date().getDay()){
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+            default:
+                day = "Error";
+                break;
+
+            }
+            document.getElementById("switchCase").innerHTML = "Today is " + day;
+    </script>
+
+    <script>
+        if(new Date().getHours() < 12){
+            document.getElementById("ismt").innerHTML = "Good Morning!!";
+        }
+        else if(new Date().getHours() > 17){
+            document.getElementById("ismt").innerHTML = "Good Afternoon!!";
+        }
+        else{
+            document.getElementById("ismt").innerHTML = "Good Evening!!";
+        }
+    </script>
+</body>
+</html>
